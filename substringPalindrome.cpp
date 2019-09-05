@@ -1,20 +1,20 @@
-import java.util.*;
-public class Main
-{
-	public static void main(String[] args) {
-		  Scanner s=new Scanner(System.in);
-        String a=s.next(),b="",c="",d="";
+#include<iostream>
+using namespace std;
+int main()
+    {
+        string a,b="",c="",d="";
+        cin>>a;
         int i,j;
         for(i=0;i<a.length();i++)
         {
         for(j=i;j<a.length();j++)
         {
-        b+=a.charAt(j);
+        b+=a[j];
         for(int k=j;k>=i;k--)
         {
-        c+=a.charAt(k);
+        c+=a[k];
         }
-        if(b.equals(c)&&c.length()>d.length())
+        if((b==c)&&c.length()>d.length())
         {
         d=c;
         }
@@ -22,7 +22,7 @@ public class Main
         }
         b="";
         }
-        System.out.println(d);
+        cout<<d;
 
-	}
+	return 0;
 }
